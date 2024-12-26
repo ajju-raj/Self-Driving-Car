@@ -17,7 +17,7 @@ class Car{
 
         if(ctrl!="DUMMY"){
             this.sensor=new Sensor(this);
-            this.brain=new NeuralNetwork(
+            this.brain=new NN(
                 [this.sensor.rayCount,6,4]
             );
         }
@@ -59,7 +59,7 @@ class Car{
                 s=>s==null?0:1-s.offset
             );
 
-            const outputs=NeuralNetwork.feedForward(offsets,this.brain);
+            const outputs=NN.feedForward(offsets,this.brain);
 
             if(this.useBrain){
 
@@ -76,13 +76,13 @@ class Car{
     #assessDamage(roadBorders,traffic){
 
         for(let i=0;i<roadBorders.length;i++){
-            if(polysIntersect(this.polygon,roadBorders[i])){
+            if(polysItst(this.polygon,roadBorders[i])){
                 return true;
             }
         }
         
         for(let i=0;i<traffic.length;i++){
-            if(polysIntersect(this.polygon,traffic[i].polygon)){
+            if(polysItst(this.polygon,traffic[i].polygon)){
                 return true;
             }
         }

@@ -54,7 +54,7 @@ class Visualizer{
                 );
                 
                 ctx.lineWidth=2;
-                ctx.strokeStyle=getRGBA(weights[i][j]);
+                ctx.strokeStyle=getrgba(weights[i][j]);
                 ctx.stroke();
             }
         }
@@ -69,7 +69,7 @@ class Visualizer{
             ctx.fill();
             ctx.beginPath();
             ctx.arc(x,bottom,nodeRadius*0.6,0,Math.PI*2);
-            ctx.fillStyle=getRGBA(inputs[i]);
+            ctx.fillStyle=getrgba(inputs[i]);
             ctx.fill();
         }
         
@@ -82,13 +82,13 @@ class Visualizer{
             ctx.fill();
             ctx.beginPath();
             ctx.arc(x,top,nodeRadius*0.6,0,Math.PI*2);
-            ctx.fillStyle=getRGBA(outputs[i]);
+            ctx.fillStyle=getrgba(outputs[i]);
             ctx.fill();
 
             ctx.beginPath();
             ctx.lineWidth=2;
             ctx.arc(x,top,nodeRadius*0.8,0,Math.PI*2);
-            ctx.strokeStyle=getRGBA(biases[i]);
+            ctx.strokeStyle=getrgba(biases[i]);
             ctx.setLineDash([3,3]);
             ctx.stroke();
             ctx.setLineDash([]);
