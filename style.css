@@ -1,5 +1,4 @@
 body{
-    margin:0;
     background:darkgray;
     overflow:hidden;
     display:flex;
@@ -18,10 +17,18 @@ button{
     padding: 5px;
     margin: 2px;
     cursor:pointer;
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    background: #00b300;
+    border: 4px solid #0BDA51;
+    color: white;
+    font-size: 16px;
 }
 
 button:hover{
-    background:blue;
+    background:#0BDA51;
 }
 
 #netCvs{
@@ -30,4 +37,16 @@ button:hover{
 
 #carCvs{
     background:lightgray;
+}
+
+.con{
+    border: 10px solid #00b300;
+    border-radius: 10px;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
 }

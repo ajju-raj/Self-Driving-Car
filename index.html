@@ -6,16 +6,20 @@
 </head>
 
 <body>
+    <div class="con">
+        <canvas id="carCvs">
+        </canvas>
+    </div>
 
-    <canvas id="carCvs">
-    </canvas>
-
-    <div id="verticalButtons">
-        <button onclick="save()">💾</button>
-        <button onclick="discard()">🗑️</button>
+    <div id="sideBtns">
+        <button onclick="save()">Save 💾</button>
+        <button onclick="discard()">Delete 🗑️</button>
     </div>
     
-    <canvas id="netCvs"></canvas>
+    <div class="con">
+        <canvas id="netCvs">
+        </canvas>
+    </div>
     
     <!-- scripts to be included -->
     <script src="visualizer.js"></script>
